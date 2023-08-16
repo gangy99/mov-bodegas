@@ -1,0 +1,657 @@
+@charset "UFT-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #000;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+/*------------Botón volver arriba----------*/
+
+.btn-volver-arriba{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 30%;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 300;
+    margin-right: -60px;
+    transition: all .4s ease;
+}
+
+.btn-volver-arriba a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    border-radius: 30%;
+    text-align: center;
+}
+
+.btn-volver-arriba a i{
+    font-size: 1rem;
+    color: #fff;
+    line-height: 40px;
+}
+
+/* Navegador Mobile */
+
+.burger{
+    display: none;
+}
+
+/* Navegador Encabezado */
+
+nav {
+    background-color: black;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.menu-bar{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+
+.menu-bar ul {
+    display: flex;
+    justify-content: center;
+}
+
+.menu-bar ul a{
+    margin: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    
+}
+
+.menu-bar ul a:hover{
+    color:#ff9500;
+    transition: all .5s ease;
+}
+
+.menu-bar img {
+    height: 2.5rem;
+    width: auto;
+    margin: 1rem;
+}
+
+.menu-bar i{
+    font-size: 1.2rem;
+    margin: 1rem;
+    color: #fff;
+}
+
+
+/* Navegador Fijo */
+
+.fixed{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    z-index: 90;
+    transition: all .4s ease;
+    margin-top: -80px;
+    background: #fff;
+}
+
+.fixed ul {
+    display: flex;
+    justify-content: center;
+}
+
+.fixed ul a{
+    margin: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+    
+}
+
+.fixed ul a:hover{
+    color:#ff9500;
+    transition: all .5s ease;
+}
+
+.fixed img {
+    height: 2.5rem;
+    width: auto;
+    margin: 1rem;
+    filter: invert(100%);
+}
+
+.fixed i{
+    font-size: 1.2rem;
+    margin: 1rem;
+    color: #000;
+}
+
+
+/* Banner principal */
+
+.banner {
+    width: 100%;
+    height: auto;
+    display:grid;
+    color: #fff;
+}
+
+.banner video{
+    width: 100%;
+    filter: brightness(60%) 
+            drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    position: relative;
+    
+}
+
+.titulo {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    justify-self: center;
+    align-self: center;
+}
+
+.texto-banner{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.texto-banner img{
+    height: 30vh;
+    margin: 0 0 2rem 0;
+}
+
+.texto-banner p{
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.titulo a{
+    background-color: #0d0d0d;
+    padding: 1rem;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    border: none;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.titulo a:hover{
+    color:#000;
+    transition: all .5s ease;
+    background-color: #fff;
+}
+
+/* Slide 01 - Rentar Minibodega */
+
+.container{
+    width: 80%;
+    max-width: 1080px;
+    margin: 0% auto;
+    display: grid;
+    place-items: center;
+
+}
+
+#slide-01 h1{
+    font-size: 2rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+    margin: 6rem 0 2.5rem 0;
+}
+
+#slide-01 p{
+    font-size: 1rem;
+    font-weight: lighter;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 24px;
+}
+
+
+.caracteristicas {
+    width: 100%;
+    display: flex;
+    align-content: center;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.interior-flip{
+    cursor: default;
+    height: 200px;
+    transform-style: preserve-3d;
+    transition: transform 0.4s ease 0s;
+    width: 100%;
+    -webkit-animation: giro 1s 1;
+    animation: giro 1s 1;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+.opcion{
+    float: left;
+    font-size: 1.2em;
+    margin: 1% 0 0 1%;
+    perspective: 800px;
+    transition: all 0.3s ease 0s;
+    width: 23.7%;
+    position: relative;
+    
+}
+.opcion:hover .interior-flip{
+    transform: rotateY(180deg);
+}
+
+.opcion i {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #ff9500;
+}
+
+.frente, .vuelta{
+    backface-visibility: hidden;
+    box-sizing: border-box;
+    display: block;
+    font-size: 1.2em;
+    height: 100%;
+    padding: 0.8em;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
+.frente{
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    color: #000;
+}
+
+.vuelta {
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    transform: rotateY(180deg);
+}
+
+.vuelta p{
+    align-self: center;
+    padding: 2rem;
+}
+
+@keyframes giro {
+    from {
+      transform: rotateY( 180deg);
+    }
+    to {
+      transform: rotateY( 0deg);
+    }
+}
+  
+@-webkit-keyframes giro {
+    from {
+      transform: rotateY( 180deg);
+    }
+    to {
+      transform: rotateY( 0deg);
+    }
+}
+
+/* Slide 02 - Beneficios */
+
+.carrusel {
+    width: 100%;
+    height: 400px;
+    display: flex;
+}
+
+.imagen-carrusel{
+    width: 33.33%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.imagen-carrusel:hover{
+    width: 40%;
+    transition: all .5s ease;
+    filter: brightness(120%);
+}
+
+.imagen-carrusel img{
+    position: relative;
+    height: 100%;
+    filter: brightness(70%);
+    flex-grow: 3;
+}
+
+.imagen-carrusel h2{
+    position: absolute;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    margin-top: 350px;
+    font-size: 1.2rem;
+}
+
+/* Slide 03 - Como rentar */
+
+#como-rentar{
+    margin-bottom: 2rem;
+}
+
+#como-rentar h2{
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: bolder;
+    margin: 6rem 0 3rem 0;
+}
+
+#como-rentar p{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: lighter;
+    padding-bottom: 2rem;
+}
+
+.instrucciones {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: lighter;
+    line-height: 1.5em;
+    width: 100%;
+    height: 250px;
+}
+    
+.pasos {
+    margin-right: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.pasos:last-child{
+    margin-right: 0px;
+}
+
+.pasos i{
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+}
+
+#como-rentar a{
+    text-decoration: none;
+    font-weight: bold;
+    color: #ff9500;
+
+}
+
+/* Contacto */
+
+.contacto {
+    width: 100%;
+    display: flex;
+    background-color: #000;
+    color: #fff;
+}
+
+.formulario{
+    width: 50%;
+    margin: 5rem 3rem;
+    text-transform: uppercase;
+}
+
+.texto-form h2{
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.texto-form p:first-of-type{
+    margin-bottom: 1.5rem;
+    font-weight: lighter;
+}
+
+
+.imagen-form {
+    background-image: url(../imgs/img-contacto.jpg);
+    width: 50%;
+    min-width: 50%;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+.formulario form input[type="text"],
+.formulario form input[type="email"],
+.formulario form input[type="tel"]{
+
+    background: none;
+    border: none;
+    border-bottom: solid 1px #fff;
+    width: 100%;
+    outline: none;
+    padding: 10px 0;
+    margin-bottom: 1rem;
+    font-size: .9rem;
+    font-weight: lighter;
+    color: #fff;
+}
+
+.formulario input::placeholder,
+.formulario textarea::placeholder{
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+.formulario textarea{
+    background: none;
+    border: none;
+    border-bottom: solid 1px #fff;
+    width: 100%;
+    outline: none;
+    padding: 10px 0;
+    margin-bottom: 1rem;
+    font-size: .9rem;
+    font-weight: lighter;
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 50px;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+.formulario input[type="submit"]{
+    width: 100%;
+    border-radius: 0px;
+    border: none;
+    background-color: white;
+    text-transform: uppercase;
+    padding: 10px 0;
+}
+
+.formulario input[type="submit"]:hover{
+    color: #fff;
+    background-color: #ff9500;
+    transition: all .3s ease;
+}
+
+
+/*Validación formulario*/
+
+.formulario .error{
+    color: #ff8c8c;
+    font-size: 12px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    text-transform: none;
+    display: none;
+}
+
+/* Mapa */
+
+.mapa{
+    width: 100%;
+    height: 600px;
+}
+
+/* Footer */
+
+footer{
+    background-color: #000;
+    width: 100%;
+    color: #fff;
+}
+
+.footer-ul{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.columna{
+    margin: 2rem 2rem;
+    align-self: center;
+    text-align: center;
+}
+
+.columna h2{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width:600px) {
+
+    /*ENCABEZADO*/
+
+    .menu-bar{
+        display: none;
+    }
+
+    .burger{
+        display: block;
+        width: 100%;
+        padding: 5px 18px;
+        background: #fff;
+        color: #000;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+    }
+
+    .barra{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .barra img{
+        width: 50px;
+        filter: invert(100%);
+    }
+
+    .barra a i{
+        font-size: 1.4rem;
+        color: #000;
+    }
+
+    .burger ul{
+        width: 80%;
+        display: block;
+        position: fixed;
+        top: 36px;
+        left: -100%;
+        border-bottom: 1px solid rgba(204, 204, 204, 0.5);
+        border-right: 1px solid rgba(204, 204, 204, 0.5);
+        box-shadow: 0 1px 5px -1px;
+        background: #fff;
+        padding: 0;
+    }
+
+    .burger ul a{
+        display: block;
+        padding: 10px;
+        border-bottom: 1px solir rgba(204, 204, 204, 0.5);
+        color: #000;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    .burger ul a:hover{
+        background: #ff9500;
+        color: #000;
+
+    }
+
+    .fixed{
+        display: none;
+    }
+}
